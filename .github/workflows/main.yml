@@ -1,0 +1,27 @@
+on: 
+  workflow_dispatch: {}
+  schedule:
+    # Makes commit(s) at 9am daily
+    # Change to whatever cron expression you like
+    - cron: "0 9 * * *"
+
+jobs:
+  lit-job:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    name: A job to get you lit
+    steps:
+      - uses: actions/checkout@v3
+      - name: make commits
+        # Uses GitHub action defined in https://github.com/FredaXin/gitlit
+        uses: FredaXin/gitlit@main
+        with:
+          # Defines the range of number of commits
+          # Change to your desierd lower and upper bound
+          lower-bound: 0
+          upper-bound: 6
+          # Change to your Github username
+          user-name: YourGithubUserName
+          # Change to your email used for Github account
+          user-email: YourEmail4Github
