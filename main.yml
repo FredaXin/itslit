@@ -1,0 +1,15 @@
+on: 
+  - workflow_dispatch
+
+jobs:
+  lit-job:
+    runs-on: ubuntu-latest
+    name: A job to get you lit
+    steps:
+      - name: make commits
+        uses: FredaXin/gitlit
+        with:
+          lower-bound: 0
+          upper-bound: 6
+          user-name: FredaXin
+          user-email: freda.xin@gmail.com
