@@ -21,7 +21,7 @@ jobs:
           # Change to your desierd lower and upper bound
           lower-bound: 0
           upper-bound: 6
-          # Change to your Github username
+          # Change to your GitHub username
           user-name: YourGithubUserName
-          # Change to your email used for Github account
+          # Change to your email used for GitHub account
           user-email: YourEmail4Github
